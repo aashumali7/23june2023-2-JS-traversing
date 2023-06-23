@@ -4,8 +4,77 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript Traversing</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+
+        </style>
     </head>
     <body>
-    
+        <table class="table w-50 offset-3 mt-5">
+            <thead>
+                 <tr>
+                    <th>no.</th>
+                    <th>student name</th>
+                    <th>student surname</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>aashu</td>
+                    <td>mali</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" aashu(this)">view</button>
+                        <button class="btn btn-primary">edit</button>
+                        <button class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>kavi</td>
+                    <td>sharma</td>
+                    <td> 
+                        <button class="btn btn-success a_viewbtn">view</button>
+                        <button class="btn btn-primary">edit</button>
+                        <button class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>aashu2</td>
+                    <td>mali</td>
+                    <td>
+                        <button class="btn btn-success"onclick=" aashu(this)">view</button>
+                        <button class="btn btn-primary">edit</button>
+                        <button class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>kavi2</td>
+                    <td>sharma</td>
+                    <td>
+                        <button class="btn btn-success"onclick=" aashu(this)">view</button>
+                        <button class="btn btn-primary">edit</button>
+                        <button class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script>
+     let aashu = (e) =>{
+        console.log(e.closest('tr').querySelector('td:nth-child(2)').innerHTML);
+        //console.log("OK",e.target.closest('tr').querySelector('td:nth-child(2)').innerHTML););
+     }
+
+       //element.addEventListener(event, function, useCapture); 
+       //element = document.queryselector(selector)
+      console.log(document.querySelector('button.a_viewbtn'))
+      document.querySelector('.a_viewbtn').addEventListener('click', (e)=>{  // e is a formal argument
+        console.log('',e.target.closest('tr').querySelector('td:nth-child(2)').innerHTML);
+      })
+        </script>
     </body>
 </html>
